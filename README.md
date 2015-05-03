@@ -61,12 +61,12 @@ vim 可以通过 `a` 命令从命令模式进入编辑模式。 输入完成后�
 
 当然,不太友好, 让服务器在后台运行的命令是:
 
-    ssserver -c /etc/shadowsocks.json -d start
+    ssserver -c /etc/shadowsocks/shadowsocks.json -d start
 
 -d 就是 daemon, 守护进程的意思. ssserver 程序会理解的。
 对应的停止命令: 
 
-    ssserver -c /etc/shadowsocks.json -d stop
+    ssserver -c /etc/shadowsocks/shadowsocks.json -d stop
 
 相关的wiki在这里: [Configuration-via-Config-File](https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File)
 
