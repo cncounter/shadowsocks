@@ -7,7 +7,7 @@ shadowsocks
 
 A fast tunnel proxy that helps you bypass firewalls.
 
-Server
+Server 服务端
 ------
 
 ### Install
@@ -17,7 +17,7 @@ Debian / Ubuntu:
     apt-get install python-pip
     pip install shadowsocks
 
-CentOS:
+CentOS 安装方法:
 
     yum install python-setuptools && easy_install pip
     pip install shadowsocks
@@ -26,15 +26,32 @@ Windows:
 
 See [Install Server on Windows]
 
-### Usage
+### 简单运行:
 
     ssserver -p 443 -k password -m aes-256-cfb
 
-To run in the background:
+在后台运行:
 
     sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
 
-To stop:
+比较好的运行方式: 
+
+创建文件:  `/etc/shadowsocks/config.json`
+输入内容: 
+
+    {
+        "server":"198.11.179.83", 
+        "server_port":10086,
+        "local_port":1080,
+        "password":"******",
+        "timeout":600,
+        "method":"aes-256-cfb"
+    }
+
+此时,可以
+
+
+停止服务器:
 
     sudo ssserver -d stop
 
