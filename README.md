@@ -76,6 +76,26 @@ vim 可以通过 `a` 命令从命令模式进入编辑模式。 输入完成后�
 
 更多的客户端或其他信息, 请参考原版的: [Wiki]
 
+如果想要自动启动，可以编辑 `/etc/rc.local` 文件，添加上面的启动脚本。
+
+```
+[root@aliyun ~]# cat /etc/rc.local 
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+
+# start tomcat7
+/usr/local/tomcat7/bin/startup.sh
+
+# start shadowsocks
+/usr/bin/ssserver -c /etc/shadowsocks/config.json -d start
+```
+
+当然,你看需要使用 `sudo vim /etc/rc.local` 来编辑。然后保存。
 
 To check the log:
 
