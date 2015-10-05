@@ -95,7 +95,7 @@ touch /var/lock/subsys/local
 /usr/bin/ssserver -c /etc/shadowsocks/config.json -d start
 ```
 
-当然,你看需要使用 `sudo vim /etc/rc.local` 来编辑。然后保存。
+当然,如果不是root则需要使用 `sudo vim /etc/rc.local` 来编辑。然后保存。
 
 To check the log:
 
