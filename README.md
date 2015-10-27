@@ -54,7 +54,6 @@ See [Install Server on Windows]
 输入内容: 
 
     {
-        "server":"198.11.179.83", 
         "server_port":10086,
         "local_port":1080,
         "password":"******",
