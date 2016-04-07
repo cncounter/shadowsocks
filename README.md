@@ -101,6 +101,11 @@ touch /var/lock/subsys/local
 
 当然,如果不是root则需要使用 `sudo vim /etc/rc.local` 来编辑。然后保存。
 
+查看有哪个IP在连接10086端口:
+
+    netstat -nat|grep -i "10086"|grep ESTABLISHED|awk '{print $5}'|awk -F: '{print $1}'|awk '!a[$0]++'
+
+
 To check the log:
 
     sudo less /var/log/shadowsocks.log
