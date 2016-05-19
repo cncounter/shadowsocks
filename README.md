@@ -101,19 +101,26 @@ touch /var/lock/subsys/local
 
 当然,如果不是root则需要使用 `sudo vim /etc/rc.local` 来编辑。然后保存。
 
+如果有权限问题，比如 CentOS7，则可能需要执行才能自动启动
+
+    sudo chmod +x /etc/rc.d/rc.local
+
+另外, 如果开启了 iptables 或者 firewalld, 则需要启用某个端口。 或者简单粗暴地关闭防火墙。
+
+
 查看有哪个IP在连接10086端口:
 
     netstat -nat|grep -i "10086"|grep ESTABLISHED|awk '{print $5}'|awk -F: '{print $1}'|awk '!a[$0]++'
 
 
-To check the log:
+查看连接访问日志:
 
     sudo less /var/log/shadowsocks.log
 
 Check all the options via `-h`. You can also use a [Configuration] file
 instead.
 
-Client
+客户端(Client)
 ------
 
 * [Windows] / [OS X]
