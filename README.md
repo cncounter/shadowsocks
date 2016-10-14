@@ -19,12 +19,12 @@ Debian / Ubuntu:
 
 CentOS 安装方法:
 
-    yum install python-setuptools && easy_install pip
+    yum install -y python-setuptools && easy_install pip
     pip install shadowsocks
 
 (如果有权限问题，可能需要这样:)
 
-    sudo yum install python-setuptools && sudo easy_install pip
+    sudo yum install -y python-setuptools && sudo easy_install pip
     sudo pip install shadowsocks
 
 Windows:
