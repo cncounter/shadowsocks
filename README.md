@@ -61,6 +61,23 @@ See [Install Server on Windows]
         "method":"aes-256-cfb"
     }
 
+如果想配置多个用户,请使用如下形式:
+
+```
+{
+    "server": "0.0.0.0",
+    "port_password": {
+        "8381": "foobar1",
+        "8382": "foobar2",
+        "8383": "foobar3",
+        "8384": "foobar4"
+    },
+    "timeout": 300,
+    "method": "aes-256-cfb"
+}
+```
+
+
 vim 可以通过 `a` 命令从命令模式进入编辑模式。 输入完成后可以通过 `Esc` 键从编辑模式进入命令模式,然后输入 `:wq` 则保存退出.
 
 此时, 控制台运行方式是: 
